@@ -1,0 +1,40 @@
+<div class="page-header">
+  <%= link_to new_med_path, class: 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-plus"></span>
+    New Med
+  <% end %>
+  <h1>Here are your Meds</h1>
+</div>
+
+<div class="table-responsive meds">
+  <table class="table table-striped table-bordered table-hover">
+    <thead>
+      <tr>
+            <th>Drug</th>
+            <th>Directions</th>
+            <th>Comments</th>
+            <th>Show</th>
+            <th>Edit</th>
+            <th>Destroy</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <%= content_tag_for(:tr, @meds) do |med| %>
+        <td><%= med.title %></td>
+        <td><%= med.directions %></td>
+        <td><%= med.comments %></td>
+
+        <% if med.completed %>
+          <td><span class="glyphicon glyphicon-ok"></span></td>
+        <% else %>
+          <td></td>
+        <% end %>
+
+        <td><%= link_to 'Show', med %></td>
+        <td><%= link_to 'Edit', edit_med_path(med) %></td>
+        <td><%= link_to 'Destroy', med, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <% end %>
+    </tbody>
+  </table>
+</div>
