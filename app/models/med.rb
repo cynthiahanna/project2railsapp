@@ -1,4 +1,6 @@
 class Med < ActiveRecord::Base
+  belongs_to :user
+
   validates :title, presence: true
 
   before_save :default_values
@@ -6,7 +8,7 @@ class Med < ActiveRecord::Base
   private
 
   def default_values
-    self.completed ||= false
-    nil                           # required so that TX will not rollback!!!
+    # self.completed ||= false
+    # nil                           # required so that TX will not rollback!!!
   end
 end

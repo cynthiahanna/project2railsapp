@@ -1,10 +1,23 @@
 class MedsController < ApplicationController
+  before_action :signed_in_user
   before_action :set_med, only: [:show, :edit, :update, :destroy]
+
+  # def completed
+  #   @med.completed = !@med.completed
+  #   respond_to do |format|
+  #     if @med.save
+  #       format.html { redirect_to meds_path }
+  #       format.json { render :show, status: :ok, location: @med }
+  #     else
+  #       # show some error message
+  #     end
+  #   end
+  # end
 
   # GET /meds
   # GET /meds.json
   def index
-    @meds = Med.order(created_at: :desc)
+    @meds = current_user.meds.order(created_at: :desc)
   end
 
   # GET /meds/1
@@ -25,6 +38,7 @@ class MedsController < ApplicationController
   # POST /meds.json
   def create
     @med = Med.new(med_params)
+    @med.user = current_user
 
     respond_to do |format|
       if @med.save

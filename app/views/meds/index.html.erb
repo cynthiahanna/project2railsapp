@@ -25,11 +25,6 @@
         <td><%= med.directions %></td>
         <td><%= med.comments %></td>
 
-        <% if med.completed %>
-          <td><span class="glyphicon glyphicon-ok"></span></td>
-        <% else %>
-          <td></td>
-        <% end %>
 
         <td><%= link_to 'Show', med %></td>
         <td><%= link_to 'Edit', edit_med_path(med) %></td>
