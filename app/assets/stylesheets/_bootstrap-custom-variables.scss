@@ -1,2 +1,11 @@
-// custom settings for Twitter Bootstrap
-$body-bg: #4af;
+/*// custom settings for Twitter Bootstrap
+/*$body-bg: #4af;
+*/
+
+body {
+  background-image: image-url('pill-doctor.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  height: 700px;
+}

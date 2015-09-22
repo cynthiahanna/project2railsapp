@@ -86,3 +86,9 @@ class MedsController < ApplicationController
       params.require(:med).permit(:title, :directions, :comments)
     end
 end
+
+    # params come from url. if they're trying to get a todo that doesnt belong to them, they get redirected somewhere else.
+    def verify_correct_user
+      @med = current_user.med_params.find_by(id: params[:id])
+      redirect_to root_url, notice: 'You are are being watched!' if @med.nil?
+    end
