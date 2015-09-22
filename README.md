@@ -1,7 +1,16 @@
 # project2railsapp
 Ruby on Rails app: My Med List
 
-The Mock-up
+<h2>Project Requirements</h2>
+<ul>
+<li>Rails 4 app with Postgresql (pg gem + Postgresql on Heroku)</li>
+<li>Full CRUD functionality in at least one controller</li>
+<li>Authentication</li>
+<li>Include at least two models with at least one association</li>
+<li>RESTful routes</li>
+</ul>
+
+<h2>The Mock-up</h2>
 <img src="https://github.com/cynthiahanna/project2railsapp/blob/master/app/assets/images/railsmockup.jpg" alt="Mockup" style="max-width:100%;">
 
 <h2>Links to Project Deliverables</h2>
