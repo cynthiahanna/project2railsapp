@@ -10,6 +10,13 @@ Ruby on Rails app: My Med List
 <li>RESTful routes</li>
 </ul>
 
+<h2>Challenge Add Ons</h2>
+<ul>
+<li>Style your app with Bootstrap/SASSStyle your app with Bootstrap/SASS</li>
+<li>Have multiple models/additional controllers</li>
+<li>Use an API -- Google Maps, Yelp, etc</li>
+</ul>
+
 <h2>The Mock-up</h2>
 <img src="https://github.com/cynthiahanna/project2railsapp/blob/master/app/assets/images/railsmockup.jpg" alt="Mockup" style="max-width:100%;">
 
